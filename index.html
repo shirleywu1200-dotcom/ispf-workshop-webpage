@@ -1,131 +1,148 @@
-import React from 'react';
-import { ShieldCheck, Target, Users, Calendar, RefreshCw, Lightbulb, FileSpreadsheet, Map, ListChecks, ArrowRight } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISPF 戰略獲利實戰工作坊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* You can add custom styles here if needed in the future */
+        body {
+            font-family: 'sans-serif';
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
 
-// --- Helper Components ---
-const Section = ({ children, className = '' }) => (
-  <section className={`py-16 px-6 md:px-12 lg:px-24 ${className}`}>
-    <div className="max-w-4xl mx-auto">{children}</div>
-  </section>
-);
-
-const SectionTitle = ({ children }) => (
-  <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">
-    {children}
-  </h2>
-);
-
-// --- Main Page Component ---
-const ISPFWorkshopPageFinalAmber = () => {
-  return (
-    <div className="bg-slate-50 font-sans">
-      {/* --- Hero Section --- */}
-      <header className="bg-teal-600 text-white text-center py-20 px-6">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">ISPF 戰略獲利實戰工作坊</h1>
-          <p className="text-xl md:text-2xl text-teal-100 mb-8">
-            一趟為期一個月的深度陪伴，與您一同釐清策略、看見獲利
-          </p>
-          <div className="inline-block bg-black bg-opacity-25 text-white font-semibold py-3 px-6 rounded-lg">
-            <p className="text-lg tracking-wide">開課日期：12/21 (日)・12/22 (一)・1/11 (日)</p>
-          </div>
-        </div>
-      </header>
-
-      {/* --- Pain Points Section --- */}
-      <Section>
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-slate-800 mb-6">您是否也正思索著...</h2>
-          <div className="grid md:grid-cols-3 gap-8 text-slate-600">
-            <div className="bg-white p-6 rounded-lg shadow-sm">營收成長，獲利卻沒跟上？</div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">團隊很努力，力量卻總被分散？</div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">面對市場變化，總讓人猶豫不決？</div>
-          </div>
-          <p className="mt-10 text-lg text-slate-700 max-w-2xl mx-auto">
-            這趟旅程，將陪伴您撥開數字迷霧，找到清晰的前行路徑。
-          </p>
-        </div>
-      </Section>
-
-      {/* --- The Journey Section --- */}
-      <Section className="bg-white">
-        <SectionTitle>一趟完整的【陪伴式學習旅程】</SectionTitle>
-        <div className="grid md:grid-cols-3 gap-10 text-center">
-          <div className="flex flex-col items-center">
-            <div className="bg-amber-400 p-4 rounded-full mb-4">
-              <Calendar className="text-white h-8 w-8" />
+    <!-- --- Hero Section --- -->
+    <header class="bg-teal-600 text-white text-center py-20 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">ISPF 戰略獲利實戰工作坊</h1>
+            <p class="text-xl md:text-2xl text-teal-100 mb-8">
+                一趟為期一個月的深度陪伴，與您一同釐清策略、看見獲利
+            </p>
+            <div class="inline-block bg-black bg-opacity-25 text-white font-semibold py-3 px-6 rounded-lg">
+                <p class="text-lg tracking-wide">開課日期：12/21 (六)・12/22 (日)・1/11 (六)</p>
             </div>
-            <h3 className="text-xl font-semibold text-slate-800 mb-2">課前暖身</h3>
-            <p className="text-slate-600">線上引導，高效完成資料準備。</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-amber-400 p-4 rounded-full mb-4">
-              <Users className="text-white h-8 w-8" />
+        </div>
+    </header>
+
+    <!-- --- Pain Points Section --- -->
+    <section class="py-16 px-6 md:px-12 lg:px-24">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">您是否也正思索著...</h2>
+                <div class="grid md:grid-cols-3 gap-8 text-slate-600">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">營收成長，獲利卻沒跟上？</div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">團隊很努力，力量卻總被分散？</div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">面對市場變化，總讓人猶豫不决？</div>
+                </div>
+                <p class="mt-10 text-lg text-slate-700 max-w-2xl mx-auto">
+                    這趟旅程，將陪伴您撥開數字迷霧，找到清晰的前行路徑。
+                </p>
             </div>
-            <h3 className="text-xl font-semibold text-slate-800 mb-2">課中實戰</h3>
-            <p className="text-slate-600">三日工作坊，與團隊共創戰略藍圖。</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="bg-amber-400 p-4 rounded-full mb-4">
-              <RefreshCw className="text-white h-8 w-8" />
+        </div>
+    </section>
+
+    <!-- --- The Journey Section --- -->
+    <section class="py-16 px-6 md:px-12 lg:px-24 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">
+                一趟完整的【陪伴式學習旅程】
+            </h2>
+            <div class="grid md:grid-cols-3 gap-10 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="bg-amber-400 p-4 rounded-full mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">課前暖身</h3>
+                    <p class="text-slate-600">線上引導，高效完成資料準備。</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-amber-400 p-4 rounded-full mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">課中實戰</h3>
+                    <p class="text-slate-600">三日工作坊，與團隊共創戰略藍圖。</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-amber-400 p-4 rounded-full mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v6h6"/><path d="M21 12A9 9 0 0 0 6 5.3L3 8"/><path d="M21 22v-6h-6"/><path d="M3 12a9 9 0 0 0 15 6.7l3-2.7"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">課後同行</h3>
+                    <p class="text-slate-600">兩週策略校準，確保學習確實落地。</p>
+                </div>
             </div>
-            <h3 className="text-xl font-semibold text-slate-800 mb-2">課後同行</h3>
-            <p className="text-slate-600">兩週策略校準，確保學習確實落地。</p>
-          </div>
         </div>
-      </Section>
+    </section>
 
-      {/* --- Agenda Section --- */}
-      <Section>
-        <SectionTitle>三日實戰旅程</SectionTitle>
-        <div className="max-w-2xl mx-auto space-y-8">
-          <div>
-            <h3 className="text-2xl font-bold text-slate-800 mb-2">Day 1: 釐清我們的戰場 (Where to Play)</h3>
-            <p className="text-slate-600 text-lg">從數據洞察市場，定位最有價值的戰略位置。</p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-slate-800 mb-2">Day 2: 打造我們的獲利引擎 (How to Win)</h3>
-            <p className="text-slate-600 text-lg">建立企業專屬的「獲利模擬器」，讓決策影響一目了然。</p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-slate-800 mb-2">Day 3: 擘劃我們的行動地圖 (How to Execute)</h3>
-            <p className="text-slate-600 text-lg">將策略轉化為具體行動方案，賦予團隊清晰的前進方向。</p>
-          </div>
+    <!-- --- Agenda Section --- -->
+    <section class="py-16 px-6 md:px-12 lg:px-24">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">三日實戰旅程</h2>
+            <div class="max-w-2xl mx-auto space-y-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Day 1: 釐清我們的戰場 (Where to Play)</h3>
+                    <p class="text-slate-600 text-lg">從數據洞察市場，定位最有價值的戰略位置。</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Day 2: 打造我們的獲利引擎 (How to Win)</h3>
+                    <p class="text-slate-600 text-lg">建立企業專屬的「獲利模擬器」，讓決策影響一目了然。</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Day 3: 擘劃我們的行動地圖 (How to Execute)</h3>
+                    <p class="text-slate-600 text-lg">將策略轉化為具體行動方案，賦予團隊清晰的前進方向。</p>
+                </div>
+            </div>
         </div>
-      </Section>
+    </section>
 
-      {/* --- Takeaways Section --- */}
-      <Section className="bg-white">
-        <SectionTitle>旅程結束後，您將帶走</SectionTitle>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div className="flex flex-col items-center"><FileSpreadsheet className="h-10 w-10 text-teal-600 mb-3" /><h4 className="font-semibold text-slate-700">營運損益模擬器</h4></div>
-          <div className="flex flex-col items-center"><Map className="h-10 w-10 text-teal-600 mb-3" /><h4 className="font-semibold text-slate-700">團隊策略地圖</h4></div>
-          <div className="flex flex-col items-center"><ListChecks className="h-10 w-10 text-teal-600 mb-3" /><h4 className="font-semibold text-slate-700">部門行動方案</h4></div>
-          <div className="flex flex-col items-center"><ShieldCheck className="h-10 w-10 text-teal-600 mb-3" /><h4 className="font-semibold text-slate-700">方向一致的核心團隊</h4></div>
+    <!-- --- Takeaways Section --- -->
+    <section class="py-16 px-6 md:px-12 lg:px-24 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">旅程結束後，您將帶走</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://wwwf.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mb-3"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                    <h4 class="font-semibold text-slate-700">營運損益模擬器</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mb-3"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>
+                    <h4 class="font-semibold text-slate-700">團隊策略地圖</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://wwwf.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mb-3"><path d="M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m3 12.5 2 2 4-4"/><path d="m3 19.5 2 2 4-4"/></svg>
+                    <h4 class="font-semibold text-slate-700">部門行動方案</h4>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mb-3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    <h4 class="font-semibold text-slate-700">方向一致的核心團隊</h4>
+                </div>
+            </div>
         </div>
-      </Section>
-      
-      {/* --- Final CTA Section --- */}
-      <Section>
-        <div className="text-center bg-teal-600 text-white p-10 rounded-lg">
-          <h2 className="text-3xl font-bold mb-4">一份給您和您核心團隊的誠摯邀請</h2>
-          <p className="text-lg text-teal-100 mb-8">讓我們陪您一起，將模糊的未來，轉化為清晰的作戰地圖。</p>
-          <a 
-            href="[您的Google表單報名網址]" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="bg-amber-400 text-slate-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-amber-300 transition-colors inline-flex items-center justify-center mx-auto"
-          >
-            立即報名，開啟轉型之旅 <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
+    </section>
+    
+    <!-- --- Final CTA Section --- -->
+    <section class="py-16 px-6 md:px-12 lg:px-24">
+        <div class="text-center bg-teal-600 text-white p-10 rounded-lg">
+            <h2 class="text-3xl font-bold mb-4">一份給您和您核心團隊的誠摯邀請</h2>
+            <p class="text-lg text-teal-100 mb-8">讓我們陪您一起，將模糊的未來，轉化為清晰的作戰地圖。</p>
+            <a 
+                href="https://forms.gle/YOUR_FORM_LINK_HERE" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="bg-amber-400 text-slate-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-amber-300 transition-colors inline-flex items-center justify-center mx-auto"
+            >
+                立即報名，開啟轉型之旅 
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
         </div>
-      </section>
+    </section>
 
-      {/* --- Footer --- */}
-      <footer className="text-center py-6 bg-slate-100">
-        <p className="text-slate-500">© 2025 [大梅老師/您的轉型陪伴顧問]. All Rights Reserved.</p>
-      </footer>
-    </div>
-  );
-};
+    <!-- --- Footer --- -->
+    <footer class="text-center py-6 bg-slate-100">
+        <p class="text-slate-500">© 2025 大梅老師/您的轉型陪伴顧問. All Rights Reserved.</p>
+    </footer>
 
-export default ISPFWorkshopPageFinalAmber;
+</body>
+</html>
